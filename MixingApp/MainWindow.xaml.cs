@@ -50,18 +50,25 @@ namespace MixingApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var albumTracks = _spotifyService.GetAlbumTracks();
-            if(albumTracks == null || albumTracks.Items.Count == 0)
+            if (albumTracks == null || albumTracks.Items.Count == 0)
             {
                 return;
             }
-            var albumTracksUrls = new List<string>(); 
-            foreach(var albumTrack in albumTracks.Items)
+            var albumTracksUrls = new List<string>();
+            foreach (var albumTrack in albumTracks.Items)
             {
                 albumTracksUrls.Add(albumTrack.PreviewUrl);
             }
             _bassNetService.CallBassNetRegistration();
+            //TestSetUrls(albumTracksUrls);
+            _bassNetService.Play(albumTracksUrls);
+        }
 
-            _bassNetService.Play();
+        private static void TestSetUrls(List<string> albumTracksUrls)
+        {
+            albumTracksUrls.Add("https://p.scdn.co/mp3-preview/12b8cee72118f995f5494e1b34251e4ac997445e?cid=8897482848704f2a8f8d7c79726a70d4");
+            albumTracksUrls.Add("https://p.scdn.co/mp3-preview/4a54d83c195d0bc17b1b23fc931d37fb363224d8?cid=8897482848704f2a8f8d7c79726a70d4");
+            albumTracksUrls.Add("https://p.scdn.co/mp3-preview/fce49876156ffb50ecc873e0fc7e1714bc03f10b?cid=8897482848704f2a8f8d7c79726a70d4");
         }
     }
 }
