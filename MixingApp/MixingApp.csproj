@@ -152,9 +152,9 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MixingApp.ViewModels\MixingApp.ViewModels.csproj">
-      <Project>{1696be3d-8b0d-4807-ab80-3ba8bf414e5d}</Project>
-      <Name>MixingApp.ViewModels</Name>
+    <ProjectReference Include="..\MixingApp.Services\MixingApp.Services.csproj">
+      <Project>{1baffdfd-1453-4ae9-a241-3ef733f5ba3a}</Project>
+      <Name>MixingApp.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
