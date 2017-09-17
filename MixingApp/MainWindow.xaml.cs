@@ -1,9 +1,4 @@
-﻿
-using Newtonsoft.Json;
-using SpotifyAPI.Local;
-using SpotifyAPI.Web;
-using SpotifyAPI.Web.Enums;
-using SpotifyAPI.Web.Models;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +22,7 @@ using System.Windows.Shapes;
 using Un4seen.Bass;
 using Un4seen.Bass.AddOn.Mix;
 using MixingApp.Services;
+using SpotifyAPI.Web.Enums;
 
 namespace MixingApp
 {
@@ -43,7 +39,6 @@ namespace MixingApp
         private string ClientSecret = "9cdac36957504632b2651e7a4c477f2e";
         private string OauthKey;
         private string CfidKey;
-        private SpotifyLocalAPIConfig _config;
         public Scope Scope { get; set; }
 
         public MainWindow()
@@ -54,16 +49,16 @@ namespace MixingApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _spotifyService.GetLinksSongs();
-            //var urlTrack = new List<string>();
-            //urlTrack.Add("https://open.spotify.com/track/2TpxZ7JUBn3uw46aR7qd6V");
-            //urlTrack.Add("https://open.spotify.com/track/4PjcfyZZVE10TFd9EKA72r");
-            //urlTrack.Add("https://open.spotify.com/track/2tniUNfN0hmqavFuJ2NodO");
-
-            //urlTrack.Add("https://p.scdn.co/mp3-preview/12b8cee72118f995f5494e1b34251e4ac997445e?cid=8897482848704f2a8f8d7c79726a70d4");
-            //urlTrack.Add("https://p.scdn.co/mp3-preview/4a54d83c195d0bc17b1b23fc931d37fb363224d8?cid=8897482848704f2a8f8d7c79726a70d4");
-            //urlTrack.Add("https://p.scdn.co/mp3-preview/fce49876156ffb50ecc873e0fc7e1714bc03f10b?cid=8897482848704f2a8f8d7c79726a70d4");
-
+            var albumTracks = _spotifyService.GetAlbumTracks();
+            if(albumTracks == null || albumTracks.Items.Count == 0)
+            {
+                return;
+            }
+            var albumTracksUrls = new List<string>(); 
+            foreach(var albumTrack in albumTracks.Items)
+            {
+                albumTracksUrls.Add(albumTrack.PreviewUrl);
+            }
             _bassNetService.CallBassNetRegistration();
 
             _bassNetService.Play();
