@@ -18,6 +18,7 @@ namespace MixingApp.Services
         {
             if (Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero))
             {
+
                 int stream1 = Bass.BASS_StreamCreateURL("https://p.scdn.co/mp3-preview/12b8cee72118f995f5494e1b34251e4ac997445e?cid=8897482848704f2a8f8d7c79726a70d4", 0, BASSFlag.BASS_SAMPLE_MONO, null, IntPtr.Zero);
                 int stream2 = Bass.BASS_StreamCreateURL("https://p.scdn.co/mp3-preview/4a54d83c195d0bc17b1b23fc931d37fb363224d8?cid=8897482848704f2a8f8d7c79726a70d4", 0, BASSFlag.BASS_SAMPLE_MONO, null, IntPtr.Zero);
                 int stream3 = Bass.BASS_StreamCreateURL("https://p.scdn.co/mp3-preview/fce49876156ffb50ecc873e0fc7e1714bc03f10b?cid=8897482848704f2a8f8d7c79726a70d4", 0, BASSFlag.BASS_SAMPLE_MONO, null, IntPtr.Zero);

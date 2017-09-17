@@ -50,16 +50,6 @@ namespace MixingApp
         {
             _bassNetService = new BassNetService();
             _spotifyService = new SpotifyService();
-            BassNetRegistration.CallBassNetRegistration();
-            //RunSpotify();
-            _config = new SpotifyLocalAPIConfig();
-            _config.HostUrl = "http://127.0.0.1";
-            _config.Port = 4381;
-            _config.TimerInterval = 50;
-            InitializeComponent();
-            //CfidKey = GetCfid();
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -74,9 +64,9 @@ namespace MixingApp
             //urlTrack.Add("https://p.scdn.co/mp3-preview/4a54d83c195d0bc17b1b23fc931d37fb363224d8?cid=8897482848704f2a8f8d7c79726a70d4");
             //urlTrack.Add("https://p.scdn.co/mp3-preview/fce49876156ffb50ecc873e0fc7e1714bc03f10b?cid=8897482848704f2a8f8d7c79726a70d4");
 
-            //_bassNetService.CallBassNetRegistration();
+            _bassNetService.CallBassNetRegistration();
 
-            //_bassNetService.Play();
+            _bassNetService.Play();
         }
     }
 }
