@@ -11,7 +11,7 @@ namespace MixingApp
     {
         public static void CallBassNetRegistration()
         {
-            Un4seen.Bass.BassNet.Registration("denis.gromenko@vilmate.com", "2X9232426172922");
+            BassNet.Registration("denis.gromenko@vilmate.com", "2X9232426172922");
         }
     }
 }

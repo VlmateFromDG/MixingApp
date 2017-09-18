@@ -19,8 +19,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Un4seen.Bass;
-using Un4seen.Bass.AddOn.Mix;
 using MixingApp.Services;
 using SpotifyAPI.Web.Enums;
 
