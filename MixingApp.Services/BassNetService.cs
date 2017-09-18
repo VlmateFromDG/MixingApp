@@ -34,6 +34,7 @@ namespace MixingApp.Services
                 Bass.BASS_ChannelPlay(stream2, false);
                 Bass.BASS_StreamFree(stream1);
                 VolumeUpSlow(stream2);
+                Thread.Sleep(3000);
                 Bass.BASS_ChannelSlideAttribute(stream2, BASSAttribute.BASS_ATTRIB_VOL, 0, 3000);//volume down
                 Bass.BASS_ChannelSlideAttribute(stream3, BASSAttribute.BASS_ATTRIB_VOL, 0, 0);
                 Bass.BASS_ChannelPlay(stream3, false);
@@ -55,16 +56,6 @@ namespace MixingApp.Services
             for (int i = 0; 100 > i; i++)
             {
                 stream2VolumeValue = stream2VolumeValue + 0.01F;
-                Thread.Sleep(30);
-                Bass.BASS_ChannelSlideAttribute(stream, BASSAttribute.BASS_ATTRIB_VOL, stream2VolumeValue, 0);
-            }
-        }
-        private static void VolumeDownSlow(int stream)
-        {
-            var stream2VolumeValue = 1F;
-            for (int i = 0; 100 > i; i++)
-            {
-                stream2VolumeValue = stream2VolumeValue - 0.01F;
                 Thread.Sleep(30);
                 Bass.BASS_ChannelSlideAttribute(stream, BASSAttribute.BASS_ATTRIB_VOL, stream2VolumeValue, 0);
             }
