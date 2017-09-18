@@ -33,8 +33,6 @@ namespace MixingApp
     {
         private BassNetService _bassNetService;
         private SpotifyService _spotifyService;
-        private string ClientId = "385f6403c4424a7aa4700704f3dd5284";
-        private string ClientSecret = "9cdac36957504632b2651e7a4c477f2e";
 
         public MainWindow()
         {
