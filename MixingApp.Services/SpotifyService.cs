@@ -27,8 +27,6 @@ namespace MixingApp.Services
 
         }
 
-
-
         public Paging<SimpleTrack> GetAlbumTracks()
         {
             var auth = new SpotifyAPI.Web.Auth.ClientCredentialsAuth();
