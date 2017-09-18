@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixingApp", "MixingApp\MixingApp.csproj", "{67ED15FE-FB72-4FE3-B2A9-ABFC1EB1F92F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixingApp.ViewModels", "MixingApp.ViewModels\MixingApp.ViewModels.csproj", "{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixingApp.Entities", "MixingApp.Entities\MixingApp.Entities.csproj", "{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixingApp.Services", "MixingApp.Services\MixingApp.Services.csproj", "{1BAFFDFD-1453-4AE9-A241-3EF733F5BA3A}"
 EndProject
 Global
@@ -27,22 +23,6 @@ Global
 		{67ED15FE-FB72-4FE3-B2A9-ABFC1EB1F92F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67ED15FE-FB72-4FE3-B2A9-ABFC1EB1F92F}.Release|x86.ActiveCfg = Release|x86
 		{67ED15FE-FB72-4FE3-B2A9-ABFC1EB1F92F}.Release|x86.Build.0 = Release|x86
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Debug|x86.ActiveCfg = Debug|x86
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Debug|x86.Build.0 = Debug|x86
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Release|x86.ActiveCfg = Release|x86
-		{1696BE3D-8B0D-4807-AB80-3BA8BF414E5D}.Release|x86.Build.0 = Release|x86
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Debug|x86.ActiveCfg = Debug|x86
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Debug|x86.Build.0 = Debug|x86
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Release|x86.ActiveCfg = Release|x86
-		{4FB1C509-5E7C-41ED-A5C9-39DE552BC6C9}.Release|x86.Build.0 = Release|x86
 		{1BAFFDFD-1453-4AE9-A241-3EF733F5BA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BAFFDFD-1453-4AE9-A241-3EF733F5BA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BAFFDFD-1453-4AE9-A241-3EF733F5BA3A}.Debug|x86.ActiveCfg = Debug|Any CPU

@@ -68,15 +68,12 @@
     <Content Include="Bass.Net.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="bassmix.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MixingApp.ViewModels\MixingApp.ViewModels.csproj">
-      <Project>{1696be3d-8b0d-4807-ab80-3ba8bf414e5d}</Project>
-      <Name>MixingApp.ViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,7 +23,10 @@ namespace MixingApp.Services
                 int stream2 = Bass.BASS_StreamCreateURL(albumTracksUrls[1], 0, BASSFlag.BASS_SAMPLE_MONO, null, IntPtr.Zero);
                 int stream3 = Bass.BASS_StreamCreateURL(albumTracksUrls[2], 0, BASSFlag.BASS_SAMPLE_MONO, null, IntPtr.Zero);
 
-                //Bass.BASS_ChannelSetPosition(stream2, Bass.BASS_ChannelSeconds2Bytes(stream2, 10.20), BASSMode.BASS_POS_BYTES);
+
+
+
+                Bass.BASS_ChannelSetPosition(stream1, Bass.BASS_ChannelSeconds2Bytes(stream2, 0.01), BASSMode.BASS_POS_BYTES);
                 Bass.BASS_ChannelSlideAttribute(stream1, BASSAttribute.BASS_ATTRIB_VOL, 0, 0);
                 Bass.BASS_ChannelPlay(stream1, false);
                 VolumeUpSlow(stream1);
