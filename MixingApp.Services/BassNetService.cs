@@ -44,7 +44,6 @@ namespace MixingApp.Services
                 Bass.BASS_ChannelSlideAttribute(stream3, BASSAttribute.BASS_ATTRIB_VOL, 0, 3000);//volume down
                 Thread.Sleep(3000);
                 Bass.BASS_StreamFree(stream3);
-
                 // free BASS
                 Bass.BASS_Free();
             }
