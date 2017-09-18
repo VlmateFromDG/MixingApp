@@ -37,9 +37,6 @@ namespace MixingApp
         private SpotifyService _spotifyService;
         private string ClientId = "385f6403c4424a7aa4700704f3dd5284";
         private string ClientSecret = "9cdac36957504632b2651e7a4c477f2e";
-        private string OauthKey;
-        private string CfidKey;
-        public Scope Scope { get; set; }
 
         public MainWindow()
         {
